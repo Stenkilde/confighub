@@ -1,0 +1,15 @@
+.viewer {
+    width: 100%;
+    height: calc(100vh - 74px);
+    background: #353535;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 12px;
+}
+
+.viewer p {
+    margin: 0;
+    padding: 0;
+    white-space: pre-line;
+}

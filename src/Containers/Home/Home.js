@@ -1,6 +1,6 @@
 // Third Party Components
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 // Services
 import {register} from '../../Services/user';
 import files from '../../Services/files';
@@ -33,14 +33,16 @@ class Home extends Component {
     handleSubmit(event) {
         event.preventDefault();
 
-        let UserObj = {
-            username: this.state.username,
-            password: this.state.password
-        }
 
-        register(UserObj).then(function(response) {
-            // We should handle the user back to the main page when this is done I believe
-        })
+
+        // let UserObj = {
+        //     username: this.state.username,
+        //     password: this.state.password
+        // }
+
+        // register(UserObj).then(function(response) {
+        //     // We should handle the user back to the main page when this is done I believe
+        // })
     }
 
     handleChange(type, event) {
@@ -63,26 +65,18 @@ class Home extends Component {
     //             </form>
 
     render() {
-
-        console.log(this.state.files);
-
         return (
             <div>
                 <Navigation />
-                <Grid fluid>
+                <div>
                     <Row>
-                        <Col xs={6} md={3}>
-                            Hello, world!
+                        <Col xs={12} md={10}>
+                            <TextField />
                         </Col>
-                        <Col xs={6} md={3}>
-                            Hello, world!
+                        <Col xs={12} md={2}>
+                            <Aside files={this.state.files} />
                         </Col>
                     </Row>
-                </Grid>
-                
-                <div>
-                    <TextField />
-                    <Aside files={this.state.files} />
                 </div>
             </div>
         );

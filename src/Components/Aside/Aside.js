@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom'
 // Components
 import FileItem from './FileItem';
+// Css
+import './Aside.css';
 
 class Aside extends Component {
 
@@ -20,7 +21,9 @@ class Aside extends Component {
                         return (
                             this.props.files.map((file, index) => {
                                 return (
-                                    <FileItem file={file} key={index} />
+                                    <Link key={index} className="aside-link" to={"/file/" + file.id}>
+                                        <FileItem file={file} />
+                                    </Link>
                                 );
                             })
                         )

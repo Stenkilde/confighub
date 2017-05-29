@@ -1,0 +1,23 @@
+.navigation {
+    display: flex;
+    padding: 12px;
+    background: #303344;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.navigation .title {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 8px;
+}

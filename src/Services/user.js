@@ -22,8 +22,18 @@ function me() {
 
 }
 
+function getUser(id) {
+    return request.get('http://localhost:8000/user/' + id)
+        .then(function(response) {
+            return {
+                user: response
+            };
+        });
+}
+
 module.exports = {
     auth: auth,
     register: register,
-    me: me
+    me: me,
+    getUser: getUser
 };

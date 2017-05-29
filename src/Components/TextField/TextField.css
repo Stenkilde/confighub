@@ -1,0 +1,12 @@
+.textfield-container {
+    height: calc(100vh - 42px);
+}
+
+.textfield {
+    width: 100%;
+    height: 100%;
+    background: #353535;
+    color: #fff;
+    outline: none;
+    border: none;
+}

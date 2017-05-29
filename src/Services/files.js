@@ -24,7 +24,17 @@ function get(id) {
         });
 }
 
+function post(file) {
+    return request.post('http://localhost:8000/file', file)
+        .then(function(response) {
+            return {
+                file: response
+            };
+        });
+}
+
 module.exports = {
     collection: collection,
-    get: get
+    get: get,
+    post: post
 };
