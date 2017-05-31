@@ -4,11 +4,6 @@ import PropTypes from 'prop-types';
 import './Viewer.css';
 
 class Viewer extends Component {
-
-    static propTypes = {
-        config: PropTypes.string
-    };
-
     constructor() {
         super();
 
@@ -17,16 +12,17 @@ class Viewer extends Component {
         }
     }
 
-    componentDidMount() {
-        if (this.props.config) {
-
+    componentWillReceiveProps(nextProps) { 
+        console.log(nextProps.config);
             this.setState({
-                fixedText: this.props.config.split(" ").join("\n")
+                fixedText: nextProps.config
             })
-        }
     }
 
     render() {
+
+        console.log(this.state);
+
         return (
             <div className="viewer">
                 <p>{this.state.fixedText}</p>

@@ -6,6 +6,7 @@ import files from '../../Services/files';
 // Components
 import Navigation from '../../Components/Navigation/Navigation';
 import CfgViewer from '../../Components/Cfg/Viewer';
+import CfgRater from '../../Components/Cfg/Rater';
 
 class SingleView extends Component {
 
@@ -33,7 +34,8 @@ class SingleView extends Component {
         return (
             <div>
                 <Navigation />
-                <CfgViewer config={'Aloha senor'} />
+                <CfgRater fileId={file.id} />
+                <CfgViewer config={file.body} />
             </div>
         );
     }
