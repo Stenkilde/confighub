@@ -43,7 +43,7 @@ class User extends Component {
         auth(AuthObj).then(function(response) {
             console.log(response);
             let authToken = localStorage.setItem('AuthToken', response.user.token);
-
+            console.log(authToken);
         });
     }
 
